@@ -1,11 +1,12 @@
 import Button from "../Button";
 import Clock from "./Clock";
+import style from "./Stopwhatch.module.scss"
 
 export default function Stopwatch() {
     return(
-        <div>
-            <p>Escolha um card e inicie o cronômetro</p>
-            <div>
+        <div className={style.cronometro}>
+            <p className={style.titulo}>Escolha um card e inicie o cronômetro</p>
+            <div className={style.relogioWrapper}>
                 <Clock />
             </div>
             <Button>Começar</Button>
