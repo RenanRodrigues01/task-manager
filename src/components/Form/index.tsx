@@ -14,6 +14,10 @@ class Form extends React.Component<{
     adicionarTarefa(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
         this.props.setTarefas( previousTarefas => [...previousTarefas, {...this.state}])
+        this.setState({
+            tarefa: "",
+            tempo: ""
+        })
     }
 
     render() {
