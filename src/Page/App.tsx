@@ -1,5 +1,6 @@
 import Form from "../components/Form";
 import List from "../components/List";
+import Stopwatch from "../components/Stopwatch";
 import style from "./App.module.scss"
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <h1>hello world</h1>
       <Form />
       <List />
+      <Stopwatch />
     </div>
   );
 }

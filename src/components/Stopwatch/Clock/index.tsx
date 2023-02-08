@@ -1,4 +1,4 @@
-import style from "./Clok.module.scss"
+import style from "./Clock.module.scss"
 
 export default function Clock() {
     return(
