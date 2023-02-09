@@ -27,7 +27,7 @@ class Form extends React.Component<{
         );
         this.setState({
             tarefa: "",
-            tempo: ""
+            tempo: "00:00"
         })
     }
 
