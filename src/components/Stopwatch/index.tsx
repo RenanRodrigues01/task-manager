@@ -6,23 +6,25 @@ import Clock from "./Clock";
 import style from "./Stopwhatch.module.scss"
 
 interface props {
-    selecionado: Itarefas | undefined
+    selecionado: Itarefas | undefined,
+    finalizaTarefa: () => void
 }
-export default function Stopwatch( {selecionado}: props) {
+export default function Stopwatch( {selecionado, finalizaTarefa}: props) {
     const [tempo, setTempo] = useState<number>()
 
     useEffect( () => {
         if(selecionado?.tempo) {
-            setTempo(tempoParaSegundos(selecionado.tempo))
+            setTempo(tempoParaSegundos(selecionado.tempo));
         }
     }, [selecionado]);
 
     function regresiva(contador: number = 0) {
         setTimeout(() => {
             if(contador > 0){
-                setTempo( contador - 1)
-                return regresiva( contador - 1)
+                setTempo( contador - 1);
+                return regresiva( contador - 1);
             }
+            finalizaTarefa();
         }, 1000)
     }
 
