@@ -1,5 +1,8 @@
 
 export interface Itarefas {
     tarefa: string,
-    tempo: string
+    tempo: string,
+    selecionado: boolean,
+    completado: boolean,
+    id: string
 }

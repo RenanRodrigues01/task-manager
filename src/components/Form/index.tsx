@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidV4 } from "uuid"
 import { Itarefas } from "../../types/tarefa";
 import Button from "../Button/index"
 import style from "./Form.module.scss"
@@ -13,7 +14,17 @@ class Form extends React.Component<{
 
     adicionarTarefa(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
-        this.props.setTarefas( previousTarefas => [...previousTarefas, {...this.state}])
+        this.props.setTarefas( previousTarefas => 
+            [
+                ...previousTarefas, 
+                {
+                    ...this.state,
+                    selecionado: false,
+                    completado: false,
+                    id: uuidV4()
+                }
+            ]
+        );
         this.setState({
             tarefa: "",
             tempo: ""
