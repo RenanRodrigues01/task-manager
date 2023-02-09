@@ -19,7 +19,6 @@ function App() {
 
   return (
     <div className={style.AppStyle}>
-      <h1>hello world</h1>
       <Form setTarefas = {setTarefas} />
       <List 
         tarefas = {tarefas}
