@@ -10,7 +10,11 @@ function App() {
   const [selecionado, setSelecionado] = useState<Itarefas>();
 
   function selecionaTarefa(itemSelecionado: Itarefas): void {
-    setSelecionado(itemSelecionado)
+    setSelecionado(itemSelecionado);
+    setTarefas( previousTarefas => previousTarefas.map(tarefa => ({
+      ...tarefa,
+      selecionado: tarefa.id === itemSelecionado.id ? true : false
+    })))
   }
 
   return (
