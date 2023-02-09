@@ -1,4 +1,4 @@
-import { tempoParaSegundos } from "../../common/utils/tempoParaSegundos";
+import { tempoParaSegundos } from "../../common/utils/time";
 import Button from "../Button";
 import Clock from "./Clock";
 import style from "./Stopwhatch.module.scss"
