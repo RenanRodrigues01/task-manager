@@ -5,7 +5,7 @@ A aplicação task manager, tem como objetivo ajudar na organização das tarefa
 
 ## Demonstração
 
-Insira um gif ou um link de alguma demonstração
+![task-manager](https://user-images.githubusercontent.com/111028127/218228106-89d62533-acba-47f4-a619-c72651db44a0.gif)
 
 
 ## Funcionalidades
